@@ -30,4 +30,5 @@ extension: '' // for bigger resolution
 
 >If have to change directory structure needs to recompile with proper link (href)
 
+>If only JavaScript includes without config all images will be in list even logos... WHAT IS IN BODY TAG
 <a href="https://www.paypal.com/donate/?hosted_button_id=7KH4VV5GJR2BJ" rel="noopener" target="_blank">Support via Paypal</a>
