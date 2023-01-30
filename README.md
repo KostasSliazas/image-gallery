@@ -24,7 +24,7 @@ extension: '' // for bigger resolution
 </script>
 ```
 **CSS file loaded from JavaScript**
-```
+`
 If have to change directory structure needs to recompile with proper link (href)
-```
+`
 <a href="https://www.paypal.com/donate/?hosted_button_id=7KH4VV5GJR2BJ" rel="noopener" target="_blank">Support via Paypal</a>
