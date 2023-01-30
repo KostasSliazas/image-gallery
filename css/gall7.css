@@ -31,10 +31,23 @@
   width: 48px;
   border-radius: 50%;
   border: 0;
-  z-index: 1;
-  background: #000
+  background:rgba(77, 77, 77, .2); 
+}
+#imag7 button:focus,
+#imag7 button:hover,
+#imag7 .hvr:hover,
+#imag7 .hvr:hover button {
+  background:rgba(77, 77, 77, .3); 
+  outline: 0;
+  opacity: 1;
+  cursor: pointer
 }
 
+#imag7 button:active,
+#left7:active #ilef7,
+#rigt7:active #irig7 {
+  opacity: .3
+}
 #imag7 *,
 #imag7 ::after,
 #imag7 ::before {
@@ -85,29 +98,6 @@
   max-height: 100%;
   max-width: 100%;
   position: relative
-}
-
-#imag7 button:focus,
-#imag7 button:hover,
-#imag7 .hvr:hover,
-#imag7 .hvr:hover button {
-  background: rgba(77, 77, 77, .2);
-  outline: 0;
-  opacity: 1;
-  cursor: pointer
-}
-#insi7{
-  z-index: -1;
-  opacity: 1;
-  transition: .2s opacity;
-}
-
-#left7:active ~ #insi7,
-#rigt7:active ~ #insi7,
-#imag7 button:active,
-#left7:active #ilef7,
-#rigt7:active #irig7 {
-  opacity: .3
 }
 
 #left7,
@@ -263,8 +253,7 @@
 #ilef7 {
   left: 24px
 }
-
-.trn, #down7 {
+#down7 {
 z-index: -1;
 pointer-events: none;
 }
