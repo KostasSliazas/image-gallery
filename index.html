@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Image gallery JavaScript</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta property="og:url" content="https://kostassliazas.github.io/image-gallery.io/">
+  <meta property="og:type" content="Image gallery free">
+  <meta property="og:title" content="Image gallery JavaScript plain">
+  <meta property="og:description" content="Image gallery JavaScript + CSS">
+  <meta property="og:image" content="https://kostassliazas.github.io/image-gallery.io/photos/image1.jpg">
+  <meta name="title" content="Simple image gallery JavaScript + CSS (full screen) with play button">
+  <meta name="description" content="Simple image gallery without external libraries JavaScript(plain) + CSS">
+  <meta name="keywords" content="gallery,image,JavaScript,vanilla,photo,CSS,full,screen,play,auto,buttons">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="author" content="Kostas Šliažas">
+  <link rel="canonical" href="https://kostassliazas.github.io/image-gallery.io/">
+  <link rel="preload" href="css/listimg.min.css" as="style">
+  <link rel="preload" href="css/style-page.min.css" as="style">
+  <link rel="stylesheet" href="css/listimg.min.css">
+  <link rel="stylesheet" href="css/style-page.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Image gallery JavaScript + CSS (responsive)</h1>
+      <div class="inside">
+        <a href="https://github.com/KostasSliazas/image-gallery2/archive/refs/heads/main.zip" target="_blank" download="main.zip" rel="noopener noreferrer">Download</a>
+        <a href="https://kostassliazas.github.io/svg-examples/" target="_blank" rel="noreferrer">DEMO</a>
+        <a href="https://github.com/KostasSliazas/image-gallery.io" target="_blank" rel="noreferrer">https://github.com/KostasSliazas/image-gallery.io</a>
+      </div>
+    </header>
+    <div class="wrap">
+      <div>
+        <div class="code">
+          <p class="code__p noselect">&lt;!--Copy/Paste(ctrl+a/ctrl+c/ctrl+v)--&gt;</p>
+          <p class="code__p"><i class="code__i--re">&lt;</i>script <i class="code__i--sc">defer</i> <i class="code__i--sc">src</i><i class="code__i--re">=</i>"js/gall7.min.js"<i class="code__i--re">&gt;</i><i class="code__i--re">&lt;/</i>script<i class="code__i--re">&gt;</i></p>
+        </div>
+      </div>
+      <div>
+        <div class="code">
+          <p class="code__p noselect"><i class="code__i--el">&lt;</i>!-- optional configuration(defaults) --<i class="code__i--el">&gt;</i></p>
+          <p class="code__p"><i class="code__i--re">&lt;</i>script<i class="code__i--re">&gt;</i></p>
+          <p class="code__p">window.IGConfig <i class="code__i--el">=</i> {</p>
+          <p class="code__p">delaySeconds<i class="code__i--el">:</i> 2<i class="code__i--el">,</i></p>
+          <p class="code__p">showButtons<i class="code__i--el">:</i> 1<i class="code__i--el">,</i></p>
+          <p class="code__p">showButtonsOnPlay<i class="code__i--el">:</i> 1<i class="code__i--el">,</i></p>
+          <p class="code__p">imageContainer<i class="code__i--el">:</i> 'gall7'<i class="code__i--el">,</i></p>
+          <p class="code__p">folder<i class="code__i--el">:</i> 'x/', <i class="code__i--co">// string + "/" === folder</i></p>
+          <p class="code__p">extension<i class="code__i--el">:</i> '' <i class="code__i--co">// for bigger resolution</i></p>
+          <p class="code__p">}</p>
+          <p class="code__p"><i class="code__i--re">&lt;/</i>script<i class="code__i--re">&gt;</i></p>
+        </div>
+      </div>
+    </div>
+    <div class="images-container images">
+      <ul>
+        <li><img src="photos/image1.jpg" loading="lazy" alt="image gallery2"></li>
+        <li><img src="photos/image2.jpg" loading="lazy" alt="image gallery2"></li>
+        <li><img src="photos/image3.jpg" loading="lazy" alt="image gallery3"></li>
+        <li><img src="photos/image4.jpg" loading="lazy" alt="image gallery4"></li>
+        <li><img src="photos/car.svg" loading="lazy" alt="image gallery6"></li>
+        <li><img src="photos/lamborghini.svg" loading="lazy" alt="image gallery7"></li>
+        <li><img src="photos/car-lamborgini.svg" loading="lazy" alt="image gallery5"></li>
+      </ul>
+      <div style="display:none">
+      <h1>Image gallery with autoplay and download buttons, without external libraries just plain JavaScript (vanilla). Simple solution for portfolio or photo gallery.</h1>
+      <p><b class="code__i--re">imageContainer: </b><b><i>image gallery selects all images with given (classes) and if not set it selects all images by default.</i></b></p>
+      <p><b class="code__i--re">showButtons: </b><b><i>show bottom buttons (autoplay && download)</i></b></p>
+      <p><b class="code__i--re">folder: </b><b><i>location to bigger resolution images or images prefix</i></b></p>
+      <p><b class="code__i--re">delaySeconds: </b><b><i>how long to show image on autoplay</i></b></p>
+      <p><b class="code__i--re">showButtonsOnPlay: </b><b><i>show buttons on autoplay</i></b></p>
+    </div>
+  </div>
+  </main>
+  <footer>
+    <h3>Download JavaScript and CSS file and add to HTML</h3>
+    <p class="code__i--el">JavaScript + CSS = <b>~8.25 KB</b></p>
+    Image gallery JavaScript 2020
+  </footer>
+  <script defer src="js/gall7.min.js"></script>
+  <script>
+    window.IGConfig = {
+    delaySeconds: .7,
+    imageContainer: 'images',
+    showButtonsOnPlay: 0,
+    folder: 'big/',
+    extension: 'webp'
+    }
+  </script>
+</body>
+</html>
