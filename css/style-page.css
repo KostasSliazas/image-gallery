@@ -63,7 +63,7 @@ h3 {
   color: var(--blue-light);
   letter-spacing: .5px;
   overflow: scroll;
-  max-height: 3em;
+  max-height: 5em;
   text-align: left;
   box-shadow: 0 0 0 1px var(--secondary-2-4) inset;
   background: #fafafa;
