@@ -55,6 +55,7 @@
   IG.left = element('div')
   IG.rigt = element('div')
   IG.insi = element('div')
+  IG.spin = element('div')
 
   atribute(IG.clos, 'id', 'clos7', 'class', 'bra brb rtm rtp opa', 'aria-label', 'Close', 'title', 'Press Esc to close')
   atribute(IG.ilef, 'id', 'ilef7', 'class', 'bra rtm opa trn')
@@ -63,11 +64,11 @@
   atribute(IG.rigt, 'id', 'rigt7', 'class', 'top rgt hvr', 'aria-label', 'Next')
   atribute(IG.left, 'id', 'left7', 'class', 'top lft hvr', 'aria-label', 'Previous')
   atribute(IG.imag, 'id', 'imag7', 'class', 'hid')
+  atribute(IG.spin, 'id', 'spn', 'class', 'hid')
   IG.insi.id = 'insi7'
-
-  append(IG.cent, IG.insi, IG.rigt, IG.left, IG.clos)
   append(IG.rigt, IG.irig)
   append(IG.left, IG.ilef)
+  append(IG.cent, IG.insi, IG.rigt, IG.left, IG.clos, IG.spin)
   append(IG.imag, IG.cent)
   append(d.body, IG.imag)// append document fragment to <body>
 
@@ -91,7 +92,7 @@
   IG.loadComplete = function () {
     // remove class spn (loader)
     //if(this.imgs.complete && this.imgs.naturalHeight !== 0) 
-    this.insi.className = ''
+    this.spin.className = 'hid'
     // if autoplay is set loop from images
     this.isAutoPlayOn && this.autoPlayLoop()
   }
@@ -154,17 +155,17 @@
     const fileName = imageSource.split('/').pop()
     const arrayFileName = fileName.split(".")
     const fileNameWithExtension = arrayFileName[0] +'.'+(this.extension || arrayFileName[1])
-    const fullNamePrefixed = fileName.indexOf('.svg') > 0 ? imageSource : imageSource.replace(fileName, this.folder + fileNameWithExtension)
+    const fullNamePrefixed = arrayFileName === 'svg' ? imageSource : imageSource.replace(fileName, this.folder + fileNameWithExtension)
     
     // don't rewrite values if active and set active gallery
     if (!this.isActive) {
       this.isActive = true
       document.documentElement.style.overflow = 'hidden'// hide scrollbar
-      this.imag.className = 'top lft'
+      this.imag.className = ''
     }
     // show index and filename trying to load
     if (this.showButtons) {
-      this.alts.innerText = fileNameWithExtension
+      this.alts.innerText = arrayFileName[1] === 'svg' ? arrayFileName.join('.') : fileNameWithExtension
       this.fine.innerText = Number(this.indexOfImage) + 1
     }
     // if there is already image and src is same return and don't recreate
@@ -173,7 +174,7 @@
     // if image exist remove and later recreate it
     this.imgs && this.insi.removeChild(this.imgs)
     // add spn class when loading image src
-    this.insi.className = 'spn bra'
+    this.spin.className = 'bor'
     // show lft right buttons and bottom information (file name and index)
     this.leftRigthBtnsShow()
 
@@ -181,8 +182,13 @@
     // create new image element
     if (arrayFileName[1] === 'svg') {
       this.imgs = index.cloneNode()
-      this.imgs.removeAttribute('id')
-      this.imgs.className = ''
+      // remove existing attributes of image element because it will not apply any styling
+      // console.time()
+      while(this.imgs.attributes.length > 0 && !this.imgs.getAttribute('src'))
+      this.imgs.removeAttribute(this.imgs.attributes[0].name)
+      // this.imgs.removeAttribute('class')
+      // this.imgs.removeAttribute('id')
+      // console.timeEnd()
     }
 
     else this.imgs = element('img')
@@ -210,6 +216,8 @@
     // append image to div
     append(this.insi, this.imgs)
 
+    // change source only if it's not svg
+    if(arrayFileName[1] !== 'svg')
     // set image src if svg return full name else try to load big image
     this.imgs.src = fullNamePrefixed
 
