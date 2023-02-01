@@ -30,5 +30,5 @@ extension: '' // for bigger resolution
 
 >If have to change directory structure needs to recompile with proper link (href)
 
->Without config all images will be in list (array) even logos with ```<img>``` tag. WHAT IS IN ```<body>``` or needs to add class 'gall7' to parent element of images.
+>Without config all images will be in list (array) even logos with ```<img>``` tag. WHAT IS IN ```<body>``` or needs to add class 'gall7' to parent elements of images.
 ### Please, contribute or you can <a href="https://www.paypal.com/donate/?hosted_button_id=7KH4VV5GJR2BJ" rel="noopener" target="_blank">Support via Paypal</a>
