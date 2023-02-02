@@ -3,6 +3,9 @@
 
 ### [[Demo1]https://kostassliazas.github.io/image-gallery.io/](https://kostassliazas.github.io/image-gallery.io/)
 ### [[Demo2]https://kostassliazas.github.io/](https://kostassliazas.github.io/)
+### [[Demo3]https://kostassliazas.github.io/image-gallery-old.io/](https://kostassliazas.github.io/image-gallery-old.io/)
+### [[Demo4]https://kostassliazas.github.io/svg-examples/](https://kostassliazas.github.io/svg-examples/)
+### [[Demo5]https://kostassliazas.github.io/burundukas.github.io/#photo](https://kostassliazas.github.io/burundukas.github.io/#photo)
 
 - [x] JAVASCRIPT (VANILLA) 
 - [x] BUTTONS (LEFT, RIGHT, DOWNLOAD, AUTO PLAY)
