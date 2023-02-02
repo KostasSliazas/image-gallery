@@ -31,14 +31,14 @@
   width: 48px;
   border-radius: 50%;
   border: 0;
-  background:rgba(77, 77, 77, .2); 
+  background:rgba(77, 77, 77, .2);
 }
 
 #imag7 button:focus,
 #imag7 button:hover,
 #imag7 .hvr:hover,
 #imag7 .hvr:hover button {
-  background:rgba(77, 77, 77, .3); 
+  background:rgba(7, 7, 7, .1); 
   outline: 0;
   opacity: 1;
   cursor: pointer
