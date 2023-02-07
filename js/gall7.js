@@ -139,7 +139,7 @@
   IG.close = function () {
     this.imag.className = 'hid'
     this.isActive = false
-    d.documentElement.style.overflow = 'visible'// back to initial state of overflow
+    d.body.style.overflow = 'visible'// back to initial state of overflow
   }
 
   // left right buttons show/check method
@@ -160,7 +160,7 @@
     // don't rewrite values if active and set active gallery
     if (!this.isActive) {
       this.isActive = true
-      document.documentElement.style.overflow = 'hidden'// hide scrollbar
+      document.body.style.overflow = 'hidden'// hide scrollbar
       this.imag.className = ''
     }
     // show index and filename trying to load
@@ -291,8 +291,8 @@
     if (!IG.isActive || e.isComposing || e.key === 229) return
     // event key or target id
     const ev = e.key || e.target.id
-    if (!k[ev]) return IG.clear()
-    k[ev]()
+    if (k[ev]) k[ev]() 
+    else IG.clear()
     e.preventDefault()
     e.stopImmediatePropagation()
   }
@@ -321,6 +321,7 @@
       if (moveX < 0) k['rigt7']() // eslint-disable-line
       else k['left7']() // eslint-disable-line
     }
+    event.stopImmediatePropagation()
   }
   IG.imag.addEventListener('touchstart', touchStart, { passive: true })
   IG.imag.addEventListener('touchend', touchEnd)
