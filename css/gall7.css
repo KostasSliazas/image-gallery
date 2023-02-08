@@ -11,7 +11,9 @@
     transform: rotate(360deg)
   }
 }
-
+.fffff {
+overflow: hidden !important;
+}
 #imag7.hid, #imag7 .hid {
   display: none
 }
