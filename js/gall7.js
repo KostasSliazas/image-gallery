@@ -242,18 +242,18 @@
   // assign container elements with custom or (default = images-container) class or BODY (default = BODY)
   const container = d.getElementsByClassName(IG.imageContainer).length > 0
     ? d.getElementsByClassName(IG.imageContainer)
-    : d.getElementsByTagName('body')
+    : [d.body]
 
-  const containersArray = []
-  for (let l = container.length - 1; l >= 0; l--) containersArray.push(container[l])
+  // const containersArray = []
+  // for (let l = container.length - 1; l >= 0; l--) containersArray.push(container[l])
 
   // Loop from elements and add to array
-  for (let i = containersArray.length - 1; i >= 0; i--) {
-    const img = containersArray[i].getElementsByTagName('img')
+  for (let i = container.length - 1; i >= 0; i--) {
+    const img = container[i].getElementsByTagName('img')
     for (let j = 0; j < img.length; j++) IG.imagesArray.push(img[j])
   }
-  if (containersArray[0] && containersArray[0].tagName === 'BODY') d.body.onclick = function (e) { IG.listenForIG(e) }
-  else for (let k = containersArray.length - 1; k >= 0; k--) containersArray[k].onclick = function (e) { IG.listenForIG(e) }
+  if (container[0] && container[0].tagName === 'BODY') d.body.onclick = function (e) { IG.listenForIG(e) }
+  else for (let k = container.length - 1; k >= 0; k--) container[k].onclick = function (e) { IG.listenForIG(e) }
 
   // show download and autoplay buttons if (true = default)
     if (IG.showButtons) {
