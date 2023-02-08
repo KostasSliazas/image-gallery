@@ -141,7 +141,7 @@
     this.isActive = false
 
     // change class name to old class name without 'fffff' and trim leading spaces      
-    d.body.className = d.body.className.split('fffff').join('').trim()
+    d.documentElement.className = d.documentElement.className.split('fffff').join('').trim()
     // changing style with class name
     // d.body.style.overflow = 'visible'// back to initial state of overflow
   }
@@ -164,7 +164,7 @@
     // don't rewrite values if active and set active gallery
     if (!this.isActive) {
       this.isActive = true
-      d.body.className = d.body.className ? d.body.className + ' fffff' : 'fffff' 
+      d.documentElement.className = d.documentElement.className ? d.documentElement.className + ' fffff' : 'fffff' 
       // changing style with class
       // d.body.style.overflow = 'hidden'// hide scrollbar
       this.imag.className = ''
