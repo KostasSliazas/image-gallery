@@ -31,7 +31,7 @@
 
   //add link CSS to head
   const resource = element('link')
-  atribute(resource, 'rel', 'stylesheet', 'href', 'data:text/css;base64,QC13ZWJraXQta2V5ZnJhbWVzIGxve3Rvey13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKX19QGtleWZyYW1lcyBsb3t0b3std2Via2l0LXRyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKTt0cmFuc2Zvcm06cm90YXRlKDM2MGRlZyl9fWJvZHl7b3ZlcmZsb3c6aW5oZXJpdCFpbXBvcnRhbnQ7bWFyZ2luOjB9LmZmZntvdmVyZmxvdzpoaWRkZW4haW1wb3J0YW50fSNpbWFnN3t1c2VyLXNlbGVjdDpub25lO2JhY2tncm91bmQ6IzAwMDtjb2xvcjojNzc3O3Bvc2l0aW9uOmZpeGVkO2hlaWdodDoxMDAlO3dpZHRoOjEwMCU7dHJhbnNpdGlvbjouMnMgdHJhbnNmb3JtO3otaW5kZXg6OTk5OTk5fS5kcG57ZGlzcGxheTpub25lfS5oaWR7dHJhbnNmb3JtOnNjYWxlKDApfS5idG46OmFmdGVyLC5idG46OmJlZm9yZXtjb250ZW50OiIifS5ib3IsLmJyYTo6YWZ0ZXIsLmJyYjo6YmVmb3Jle2JvcmRlcjoycHggc29saWQgI2ZmZn0uYnRue2JhY2tncm91bmQ6cmdiYSg3Nyw3Nyw3NywuMik7aGVpZ2h0OjQ4cHg7d2lkdGg6NDhweDtib3JkZXItcmFkaXVzOjUwJTtib3JkZXI6MH0uYnRuOmZvY3VzLC5idG46aG92ZXIsLmh2cjpob3ZlciwuaHZyOmhvdmVyIGJ1dHRvbntiYWNrZ3JvdW5kOnJnYmEoNyw3LDcsLjEpO291dGxpbmU6MDtvcGFjaXR5OjE7Y3Vyc29yOnBvaW50ZXJ9I2xlZnQ3OmFjdGl2ZSAjaWxlZjcsI3JpZ3Q3OmFjdGl2ZSAjaXJpZzcsLmJ0bjphY3RpdmV7b3BhY2l0eTouM30jaW1hZzcgKiwjaW1hZzcgOjphZnRlciwjaW1hZzcgOjpiZWZvcmV7Zm9udDoxMnB4LzQgc2Fucy1zZXJpZjtwb3NpdGlvbjphYnNvbHV0ZTtib3gtc2l6aW5nOmJvcmRlci1ib3g7bWFyZ2luOjB9I2Zvb3Q3LCNvbm93N3t0ZXh0LWluZGVudDo1MHB4O3doaXRlLXNwYWNlOm5vd3JhcDtib3R0b206MjRweDtoZWlnaHQ6NDhweH0jYWx0czd7cmlnaHQ6NTBweDtvdmVyZmxvdzpoaWRkZW59LncxMHt3aWR0aDoxMDAlfSNpbnNpNywuaDEwe2hlaWdodDoxMDAlO3RleHQtYWxpZ246Y2VudGVyfS5vcGF7b3BhY2l0eTouN30jYWx0czcsI2luc2k3LCNpbnNpNyBpbWcsI3N0YXQ3e21heC1oZWlnaHQ6MTAwJTttYXgtd2lkdGg6MTAwJTtwb3NpdGlvbjpyZWxhdGl2ZX0jbGVmdDcsI3JpZ3Q3e3dpZHRoOjIwJTttaW4td2lkdGg6OTZweDtoZWlnaHQ6MTAwJX0jaWxlZjc6OmFmdGVyLCNpcmlnNzo6YWZ0ZXJ7cGFkZGluZzo5cHg7dG9wOjE0cHh9I2luc2k3IGltZywudHJue3RvcDo1MCU7ei1pbmRleDotMTstd2Via2l0LXRyYW5zZm9ybTp0cmFuc2xhdGUoLTUwJSk7dHJhbnNmb3JtOnRyYW5zbGF0ZVkoLTUwJSl9LnJ0cDo6YWZ0ZXIsLnJ0cDo6YmVmb3Jley13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSg0NWRlZyk7dHJhbnNmb3JtOnJvdGF0ZSg0NWRlZyl9LnJ0bTo6YWZ0ZXJ7LXdlYmtpdC10cmFuc2Zvcm06cm90YXRlKC00NWRlZyk7dHJhbnNmb3JtOnJvdGF0ZSgtNDVkZWcpfSNpbGVmNzo6YWZ0ZXJ7Ym9yZGVyLXdpZHRoOjJweCAwIDAgMnB4O2xlZnQ6MTRweH0jaXJpZzc6OmFmdGVye3JpZ2h0OjE0cHg7Ym9yZGVyLXdpZHRoOjJweCAycHggMCAwfSNsZWZ0Nzpob3ZlciAjaWxlZjc6OmFmdGVye2xlZnQ6OXB4fSNyaWd0Nzpob3ZlciAjaXJpZzc6OmFmdGVye3JpZ2h0OjlweH0jY2xvczc6OmFmdGVyLCNjbG9zNzo6YmVmb3Jle2JvcmRlci13aWR0aDowIDAgMCAycHg7aGVpZ2h0OjMwcHg7bGVmdDoyM3B4O3RvcDoxMHB4fSNwbGF5Nzo6YmVmb3JlLCNzcG57Ym9yZGVyLXJhZGl1czo1MCU7aGVpZ2h0OjI0cHg7d2lkdGg6MjRweH0jc3Buey13ZWJraXQtYW5pbWF0aW9uOmxvIC4zcyBsaW5lYXIgaW5maW5pdGU7YW5pbWF0aW9uOmxvIC4zcyBsaW5lYXIgaW5maW5pdGU7Ym9yZGVyLWNvbG9yOnRyYW5zcGFyZW50ICNhYWE7bGVmdDo1MCU7bWFyZ2luOi0xMnB4IDAgMCAtMTJweDt0b3A6NTAlfSNkb3duN3tib3JkZXItcmFkaXVzOjAgMCAycHggMnB4O3RvcDoyN3B4O2hlaWdodDo2cHg7d2lkdGg6MjRweDtib3JkZXItdG9wOjB9I3BsYXk3OjpiZWZvcmV7dHJhbnNpdGlvbjouMnMgYm9yZGVyLXJhZGl1czt0b3A6MTJweH0jcGxheTcuYWN0czc6OmJlZm9yZXtib3JkZXItcmFkaXVzOjRweH0jcGxheTc6OmFmdGVye2JvcmRlci1jb2xvcjp0cmFuc3BhcmVudCAjZmZmO2JvcmRlci13aWR0aDo1cHggMCA1cHggMTJweDtsZWZ0OjE5cHg7dG9wOjE5cHg7d2lkdGg6MTBweH0jcGxheTcuYWN0czc6OmFmdGVye2JvcmRlci13aWR0aDowIDJweDtwYWRkaW5nLXRvcDoxMHB4fSN3ZG93Nzo6YWZ0ZXJ7Ym9yZGVyLXdpZHRoOjAgMCAycHggMnB4O2JvdHRvbToyMXB4O2hlaWdodDoxMnB4O2xlZnQ6MThweDt3aWR0aDoxMnB4fSN3ZG93Nzo6YmVmb3Jle2JhY2tncm91bmQ6I2ZmZjtoZWlnaHQ6MThweDtsZWZ0OjIzcHg7dG9wOjlweDt3aWR0aDoycHh9I2ltYWc3LC50b3B7dG9wOjB9I2ltYWc3LC5sZnR7bGVmdDowfS5yZ3R7cmlnaHQ6MH0jY2xvczd7dG9wOjI0cHh9I2Rvd243LCNwbGF5Nzo6YmVmb3Jle2xlZnQ6MTJweH0jY2xvczcsI2lyaWc3LCNvbm93N3tyaWdodDoyNHB4O3RleHQtYWxpZ246cmlnaHR9I2Zvb3Q3LCNpbGVmN3tsZWZ0OjI0cHh9I2Rvd243e3otaW5kZXg6LTE7cG9pbnRlci1ldmVudHM6bm9uZX0=')
+  atribute(resource, 'rel', 'stylesheet', 'href', 'data:text/css;base64,QC13ZWJraXQta2V5ZnJhbWVzIGxve3Rvey13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKX19QGtleWZyYW1lcyBsb3t0b3std2Via2l0LXRyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKTt0cmFuc2Zvcm06cm90YXRlKDM2MGRlZyl9fWJvZHl7b3ZlcmZsb3c6aW5oZXJpdCFpbXBvcnRhbnQ7bWFyZ2luOjB9LmZmZntvdmVyZmxvdzpoaWRkZW4haW1wb3J0YW50fS5kcG57ZGlzcGxheTpub25lfS5oaWR7dHJhbnNmb3JtOnNjYWxlKDApfS53MTB7d2lkdGg6MTAwJX0jaW5zaTcsLmgxMHtoZWlnaHQ6MTAwJTt0ZXh0LWFsaWduOmNlbnRlcn0ub3Bhe29wYWNpdHk6Ljd9LmJ0bjo6YWZ0ZXIsLmJ0bjo6YmVmb3Jle2NvbnRlbnQ6IiJ9LmJvciwuYnJhOjphZnRlciwuYnJiOjpiZWZvcmV7Ym9yZGVyOjJweCBzb2xpZCAjZmZmfS5idG57YmFja2dyb3VuZDpyZ2JhKDc3LDc3LDc3LC4yKTtoZWlnaHQ6NDhweDt3aWR0aDo0OHB4O2JvcmRlci1yYWRpdXM6NTAlO2JvcmRlcjowfS5idG46Zm9jdXMsLmJ0bjpob3ZlciwuaHZyOmhvdmVyLC5odnI6aG92ZXIgYnV0dG9ue2JhY2tncm91bmQ6cmdiYSg3LDcsNywuMSk7b3V0bGluZTowO29wYWNpdHk6MTtjdXJzb3I6cG9pbnRlcn0jbGVmdDc6YWN0aXZlICNpbGVmNywjcmlndDc6YWN0aXZlICNpcmlnNywuYnRuOmFjdGl2ZXtvcGFjaXR5Oi4zfSNpbWFnN3t1c2VyLXNlbGVjdDpub25lO2JhY2tncm91bmQ6IzAwMDtjb2xvcjojNzc3O3Bvc2l0aW9uOmZpeGVkO3RyYW5zaXRpb246LjJzIHRyYW5zZm9ybTt6LWluZGV4Ojk5OTk5OX0jaW1hZzcgKiwjaW1hZzcgOjphZnRlciwjaW1hZzcgOjpiZWZvcmV7Zm9udDoxMnB4LzQgc2Fucy1zZXJpZjtwb3NpdGlvbjphYnNvbHV0ZTtib3gtc2l6aW5nOmJvcmRlci1ib3g7bWFyZ2luOjB9I2Zvb3Q3LCNvbm93N3t0ZXh0LWluZGVudDo1MHB4O3doaXRlLXNwYWNlOm5vd3JhcDtib3R0b206MjRweDtoZWlnaHQ6NDhweH0jYWx0czd7cmlnaHQ6NTBweH0jYWx0czcsI2luc2k3LCNpbnNpNyBpbWcsI3N0YXQ3e21heC1oZWlnaHQ6MTAwJTttYXgtd2lkdGg6MTAwJTtwb3NpdGlvbjpyZWxhdGl2ZX0jbGVmdDcsI3JpZ3Q3e3dpZHRoOjIwJTttaW4td2lkdGg6OTZweDtoZWlnaHQ6MTAwJX0jaWxlZjc6OmFmdGVyLCNpcmlnNzo6YWZ0ZXJ7cGFkZGluZzo5cHg7dG9wOjE0cHh9I2luc2k3IGltZywudHJue3RvcDo1MCU7ei1pbmRleDotMTstd2Via2l0LXRyYW5zZm9ybTp0cmFuc2xhdGUoLTUwJSk7dHJhbnNmb3JtOnRyYW5zbGF0ZVkoLTUwJSl9LnJ0cDo6YWZ0ZXIsLnJ0cDo6YmVmb3Jley13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSg0NWRlZyk7dHJhbnNmb3JtOnJvdGF0ZSg0NWRlZyl9LnJ0bTo6YWZ0ZXJ7LXdlYmtpdC10cmFuc2Zvcm06cm90YXRlKC00NWRlZyk7dHJhbnNmb3JtOnJvdGF0ZSgtNDVkZWcpfSNpbGVmNzo6YWZ0ZXJ7Ym9yZGVyLXdpZHRoOjJweCAwIDAgMnB4O2xlZnQ6MTRweH0jaXJpZzc6OmFmdGVye3JpZ2h0OjE0cHg7Ym9yZGVyLXdpZHRoOjJweCAycHggMCAwfSNsZWZ0Nzpob3ZlciAjaWxlZjc6OmFmdGVye2xlZnQ6OXB4fSNyaWd0Nzpob3ZlciAjaXJpZzc6OmFmdGVye3JpZ2h0OjlweH0jY2xvczc6OmFmdGVyLCNjbG9zNzo6YmVmb3Jle2JvcmRlci13aWR0aDowIDAgMCAycHg7aGVpZ2h0OjMwcHg7bGVmdDoyM3B4O3RvcDoxMHB4fSNwbGF5Nzo6YmVmb3JlLCNzcG57Ym9yZGVyLXJhZGl1czo1MCU7aGVpZ2h0OjI0cHg7d2lkdGg6MjRweH0jc3Buey13ZWJraXQtYW5pbWF0aW9uOmxvIC4zcyBsaW5lYXIgaW5maW5pdGU7YW5pbWF0aW9uOmxvIC4zcyBsaW5lYXIgaW5maW5pdGU7Ym9yZGVyLWNvbG9yOnRyYW5zcGFyZW50ICNhYWE7bGVmdDo1MCU7bWFyZ2luOi0xMnB4IDAgMCAtMTJweDt0b3A6NTAlfSNkb3duN3t6LWluZGV4Oi0xO3BvaW50ZXItZXZlbnRzOm5vbmU7Ym9yZGVyLXJhZGl1czowIDAgMnB4IDJweDt0b3A6MjdweDtoZWlnaHQ6NnB4O3dpZHRoOjI0cHg7Ym9yZGVyLXRvcDowfSNwbGF5Nzo6YmVmb3Jle3RyYW5zaXRpb246LjJzIGJvcmRlci1yYWRpdXM7dG9wOjEycHh9I3BsYXk3LmFjdDo6YmVmb3Jle2JvcmRlci1yYWRpdXM6NHB4fSNwbGF5Nzo6YWZ0ZXJ7Ym9yZGVyLWNvbG9yOnRyYW5zcGFyZW50ICNmZmY7Ym9yZGVyLXdpZHRoOjVweCAwIDVweCAxMnB4O2xlZnQ6MTlweDt0b3A6MTlweDt3aWR0aDoxMHB4fSNwbGF5Ny5hY3Q6OmFmdGVye2JvcmRlci13aWR0aDowIDJweDtwYWRkaW5nLXRvcDoxMHB4fSN3ZG93Nzo6YWZ0ZXJ7Ym9yZGVyLXdpZHRoOjAgMCAycHggMnB4O2JvdHRvbToyMXB4O2hlaWdodDoxMnB4O2xlZnQ6MThweDt3aWR0aDoxMnB4fSN3ZG93Nzo6YmVmb3Jle2JhY2tncm91bmQ6I2ZmZjtoZWlnaHQ6MThweDtsZWZ0OjIzcHg7dG9wOjlweDt3aWR0aDoycHh9I2ltYWc3LC50b3B7dG9wOjB9I2ltYWc3LC5sZnR7bGVmdDowfS5yZ3R7cmlnaHQ6MH0jY2xvczd7dG9wOjI0cHh9I2Rvd243LCNwbGF5Nzo6YmVmb3Jle2xlZnQ6MTJweH0jY2xvczcsI2lyaWc3LCNvbm93N3tyaWdodDoyNHB4O3RleHQtYWxpZ246cmlnaHR9I2Zvb3Q3LCNpbGVmN3tsZWZ0OjI0cHh9')
   append(d.getElementsByTagName('head')[0], resource)
 
   // create object of image gallery
@@ -63,9 +63,9 @@
   atribute(IG.cent, 'id', 'cent7', 'class', 'top lft w10 h10')
   atribute(IG.rigt, 'id', 'rigt7', 'class', 'top rgt hvr', 'aria-label', 'Next')
   atribute(IG.left, 'id', 'left7', 'class', 'top lft hvr', 'aria-label', 'Previous')
-  atribute(IG.imag, 'id', 'imag7', 'class', 'hid', 'style', 'display:none')
+  atribute(IG.imag, 'id', 'imag7', 'class', 'hid w10 h10', 'style', 'display:none')
   atribute(IG.spin, 'id', 'spn', 'class', 'dpn')
-  IG.insi.id = 'insi7'
+  atribute(IG.insi, 'id', 'insi7')
   append(IG.rigt, IG.irig)
   append(IG.left, IG.ilef)
   append(IG.cent, IG.insi, IG.rigt, IG.left, IG.clos, IG.spin)
@@ -75,7 +75,7 @@
   // autoplay method loop
   IG.autoPlayLoop = function () {
     this.isAutoPlayOn = true
-    if (this.showButtons) this.play.className = 'btn top lft bra brb opa acts7'
+    if (this.showButtons) this.play.className = 'btn top lft bra brb opa act'
 
     this.timeOut = setTimeout(function () {
       this.right().show()
@@ -137,7 +137,7 @@
 
   // method on close
   IG.close = function () {
-    this.imag.className = 'hid'
+    this.imag.className = 'hid w10 h10'
     this.isActive = false
 
     // change class name to old class name without 'fff' and trim leading spaces      
@@ -167,7 +167,7 @@
       setTimeout(function(){d.documentElement.className = d.documentElement.className ? d.documentElement.className + ' fff' : 'fff'}.bind(this),99) 
       // changing style with class
       // d.body.style.overflow = 'hidden'// hide scrollbar
-      this.imag.className = 'fff'
+      this.imag.className = 'fff w10 h10'
     }
     // show index and filename trying to load
     if (this.showButtons) {
@@ -267,7 +267,7 @@
       atribute(IG.play, 'id', 'play7', 'class', 'top lft bra brb opa btn')
       atribute(IG.down, 'id', 'down7', 'class', 'bor')
       atribute(IG.wdow, 'id', 'wdow7', 'class', 'top rgt bra rtm opa btn')
-      IG.alts.id='alts7'
+      atribute(IG.alts, 'id', 'alts7', 'class', 'fff')
       IG.foot.id='foot7'
       IG.onow.id='onow7'
       IG.fine.id='stat7'
