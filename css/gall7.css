@@ -11,46 +11,21 @@
     transform: rotate(360deg)
   }
 }
-.fffff {
-overflow: hidden !important;
-}
-#imag7.hid, #imag7 .hid {
-  display: none
+
+body {
+  overflow: inherit !important;
+  margin: 0
 }
 
-#imag7 .bor,
-#imag7 .bra::after,
-#imag7 .brb::before {
-  border: 2px solid #fff
+#imag7 {
+  user-select: none;
+  background: #000;
+  color: #777;
+  position: fixed;
+  transition: .2s transform;
+  z-index: 999999
 }
 
-#imag7 button::after,
-#imag7 button::before {
-  content: ""
-}
-#imag7 button {
-  height: 48px;
-  width: 48px;
-  border-radius: 50%;
-  border: 0;
-  background:rgba(77, 77, 77, .2);
-}
-
-#imag7 button:focus,
-#imag7 button:hover,
-#imag7 .hvr:hover,
-#imag7 .hvr:hover button {
-  background:rgba(7, 7, 7, .1); 
-  outline: 0;
-  opacity: 1;
-  cursor: pointer
-}
-
-#imag7 button:active,
-#imag7 #left7:active #ilef7,
-#imag7 #rigt7:active #irig7 {
-  opacity: .3
-}
 #imag7 *,
 #imag7 ::after,
 #imag7 ::before {
@@ -60,114 +35,154 @@ overflow: hidden !important;
   margin: 0
 }
 
-#imag7 {
-  user-select: none;
-  background: #000;
-  color: #777;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 9999
+.hdi {
+  transform: scale(0)
 }
 
-#imag7 #foot7,
-#imag7 #onow7 {
+.fff {
+  overflow: hidden !important
+}
+
+.dpn {
+  display: none
+}
+
+.w10 {
+  width: 100%
+}
+
+#insi7,
+.h10 {
+  height: 100%;
+  text-align: center
+}
+
+.opa {
+  opacity: .7
+}
+
+.but::after,
+.but::before {
+  content: ""
+}
+
+.bor,
+.bra::after,
+.brb::before {
+  border: 2px solid #fff
+}
+
+.but {
+  background: rgba(77, 77, 77, .2);
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border: 0
+}
+
+.but:focus,
+.but:hover,
+.hvr:hover,
+.hvr:hover button {
+  background: rgba(7, 7, 7, .1);
+  outline: 0;
+  opacity: 1;
+  cursor: pointer
+}
+
+.but:active,
+#left7:active #ilef7,
+#rigt7:active #irig7 {
+  opacity: .3
+}
+
+#foot7,
+#onow7 {
   text-indent: 50px;
   white-space: nowrap;
   bottom: 24px;
-  height: 48px;
+  height: 48px
 }
 
-#imag7 #alts7 {
+#alts7 {
   right: 50px;
-  overflow: hidden
 }
 
-#imag7 .w10 {
-  width: 100%;
-}
-#imag7 #insi7,
-#imag7 .h10 {
-  height: 100%;
-  text-align: center;
-}
-#imag7 .opa {
-  opacity: .7
-}
-#imag7 #alts7,
-#imag7 #insi7,
-#imag7 #insi7 img,
-#imag7 #stat7 {
+#alts7,
+#insi7,
+#insi7 img,
+#stat7 {
   max-height: 100%;
   max-width: 100%;
   position: relative
 }
 
-#imag7 #left7,
-#imag7 #rigt7 {
+#left7,
+#rigt7 {
   width: 20%;
   min-width: 96px;
   height: 100%
 }
 
-#imag7 #ilef7::after,
-#imag7 #irig7::after {
+#ilef7::after,
+#irig7::after {
   padding: 9px;
   top: 14px
 }
 
-#imag7 .trn,
-#imag7 #insi7 img {
+.trn,
+#insi7 img {
   top: 50%;
   z-index: -1;
   -webkit-transform: translate(-50%);
   transform: translateY(-50%)
 }
 
-#imag7 .rtp::before,
-#imag7 .rtp::after {
+.rtp::before,
+.rtp::after {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg)
 }
-#imag7 .rtm::after {
+
+.rtm::after {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg)
 }
 
-#imag7 #ilef7::after {
+#ilef7::after {
   border-width: 2px 0 0 2px;
   left: 14px
 }
 
-#imag7 #irig7::after {
+#irig7::after {
   right: 14px;
   border-width: 2px 2px 0 0
 }
 
-#imag7 #left7:hover #ilef7::after {
+#left7:hover #ilef7::after {
   left: 9px
 }
 
-#imag7 #rigt7:hover #irig7::after {
+#rigt7:hover #irig7::after {
   right: 9px
 }
 
-#imag7 #clos7::after,
-#imag7 #clos7::before {
+#clos7::after,
+#clos7::before {
   border-width: 0 0 0 2px;
   height: 30px;
   left: 23px;
   top: 10px
 }
 
-#imag7 #play7::before,
-#imag7 #spn {
+#play7::before,
+#spn {
   border-radius: 50%;
   height: 24px;
   width: 24px
 }
 
-#imag7 #spn {
+#spn {
   -webkit-animation: lo .3s linear infinite;
   animation: lo .3s linear infinite;
   border-color: transparent #aaa;
@@ -176,7 +191,9 @@ overflow: hidden !important;
   top: 50%
 }
 
-#imag7 #down7 {
+#down7 {
+  z-index: -1;
+  pointer-events: none;
   border-radius: 0 0 2px 2px;
   top: 27px;
   height: 6px;
@@ -184,16 +201,16 @@ overflow: hidden !important;
   border-top: 0
 }
 
-#imag7 #play7::before {
+#play7::before {
   transition: .2s border-radius;
   top: 12px
 }
 
-#imag7 #play7.acts7::before {
+#play7.atc::before {
   border-radius: 4px
 }
 
-#imag7 #play7::after {
+#play7::after {
   border-color: transparent #fff;
   border-width: 5px 0 5px 12px;
   left: 19px;
@@ -201,12 +218,12 @@ overflow: hidden !important;
   width: 10px
 }
 
-#imag7 #play7.acts7::after {
+#play7.atc::after {
   border-width: 0 2px;
   padding-top: 10px
 }
 
-#imag7 #wdow7::after {
+#wdow7::after {
   border-width: 0 0 2px 2px;
   bottom: 21px;
   height: 12px;
@@ -214,45 +231,45 @@ overflow: hidden !important;
   width: 12px
 }
 
-#imag7 #wdow7::before {
+#wdow7::before {
   background: #fff;
   height: 18px;
   left: 23px;
   top: 9px;
   width: 2px
 }
+
 #imag7,
-#imag7 .top {
+.tpo {
   top: 0
 }
+
 #imag7,
-#imag7 .lft {
+.lft {
   left: 0
 }
 
-#imag7 .rgt {
+.rgt {
   right: 0
 }
 
-#imag7 #clos7 {
+#clos7 {
   top: 24px
 }
-#imag7 #down7,
-#imag7 #play7::before {
+
+#down7,
+#play7::before {
   left: 12px
 }
-#imag7 #clos7,
-#imag7 #irig7,
-#imag7 #onow7 {
+
+#clos7,
+#irig7,
+#onow7 {
   right: 24px;
   text-align: right
 }
 
-#imag7 #foot7,
-#imag7 #ilef7 {
+#foot7,
+#ilef7 {
   left: 24px
-}
-#imag7 #down7 {
-z-index: -1;
-pointer-events: none;
 }
