@@ -165,7 +165,11 @@
     // don't rewrite values if active and set active gallery
     if (!this.isActive) {
       this.isActive = true
-      setTimeout(function(){d.documentElement.className = d.documentElement.className ? d.documentElement.className + ' fff' : 'fff'}.bind(this),99) 
+      setTimeout(function(){
+        d.documentElement.className = d.documentElement.className ? d.documentElement.className + ' fff' : 'fff'
+        //remove transition 'tra' maybe better performance
+        this.imag.className = 'fff w10'
+      }.bind(this),150)
       // changing style with class
       // d.body.style.overflow = 'hidden'// hide scrollbar
       this.imag.className = 'fff w10 tra'
@@ -179,7 +183,7 @@
     if (this.imgs && (this.imgs.src === imageSource || this.imgs.src === fullNamePrefixed)) return false
      
     // if image exist remove and later recreate it
-    this.insi.children.length > 0 && this.insi.removeChild(this.imgs)
+    this.insi.getElementsByTagName('img').length > 0 && this.insi.removeChild(this.imgs)
     // add spn class when loading image src
     this.spin.className = 'bor'
     // show lft right buttons and bottom information (file name and index)
@@ -201,7 +205,7 @@
     else this.imgs = element('img')
     
     // set image alt attribute
-    // atribute(this.imgs, 'alt', index.alt)
+    // atribute(this.imgs, 'id', index.alt)
 
     // image onerror methods
     this.imgs.onerror = function (e) {
@@ -212,6 +216,7 @@
     
     // image onload methods
     this.imgs.onload = function (e) {
+      this.loadComplete()
       //the real image loaded successfully file name
       const theRealFileName = this.imgs.src
       if(fullNamePrefixed !== theRealFileName) 
@@ -219,15 +224,9 @@
     }.bind(this)
 
     setTimeout(function(){
-      //remove transition 'tra' maybe better performance
-      this.imag.className = 'fff w10'
       // append image to div
-      append(this.insi, this.imgs)
-      this.loadComplete()
-      
+      append(this.insi, this.imgs)      
     }.bind(this),200)
-
-
 
     // change source only if it's not svg
     if(arrayFileName[1] !== 'svg')
