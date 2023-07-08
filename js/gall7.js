@@ -31,11 +31,12 @@
 
   //add link CSS to head
   const resource = element('link')
-  atribute(resource, 'rel', 'stylesheet', 'href', 'data:text/css;base64,QC13ZWJraXQta2V5ZnJhbWVzIGxve3Rvey13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKX19QGtleWZyYW1lcyBsb3t0b3std2Via2l0LXRyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKTt0cmFuc2Zvcm06cm90YXRlKDM2MGRlZyl9fWJvZHl7b3ZlcmZsb3c6aW5oZXJpdCFpbXBvcnRhbnQ7bWFyZ2luOjB9I2ltYWc3e3VzZXItc2VsZWN0Om5vbmU7YmFja2dyb3VuZDojMDAwO2NvbG9yOiM3Nzc7cG9zaXRpb246Zml4ZWQ7dHJhbnNpdGlvbjouMnMgdHJhbnNmb3JtO3otaW5kZXg6OTk5OTk5fSNpbWFnNyAqLCNpbWFnNyA6OmFmdGVyLCNpbWFnNyA6OmJlZm9yZXtmb250OjEycHgvNCBzYW5zLXNlcmlmO3Bvc2l0aW9uOmFic29sdXRlO2JveC1zaXppbmc6Ym9yZGVyLWJveDttYXJnaW46MH0uaGlke3RyYW5zZm9ybTpzY2FsZSgwKX0uZmZme292ZXJmbG93OmhpZGRlbiFpbXBvcnRhbnR9LmRwbntkaXNwbGF5Om5vbmV9LncxMHt3aWR0aDoxMDAlfSNpbnNpNywuaDEwe2hlaWdodDoxMDAlO3RleHQtYWxpZ246Y2VudGVyfS5vcGF7b3BhY2l0eTouN30uYnRuOjphZnRlciwuYnRuOjpiZWZvcmV7Y29udGVudDoiIn0uYm9yLC5icmE6OmFmdGVyLC5icmI6OmJlZm9yZXtib3JkZXI6MnB4IHNvbGlkICNmZmZ9LmJ0bntiYWNrZ3JvdW5kOnJnYmEoNzcsNzcsNzcsLjIpO2hlaWdodDo0OHB4O3dpZHRoOjQ4cHg7Ym9yZGVyLXJhZGl1czo1MCU7Ym9yZGVyOjB9LmJ0bjpmb2N1cywuYnRuOmhvdmVyLC5odnI6aG92ZXIsLmh2cjpob3ZlciBidXR0b257YmFja2dyb3VuZDpyZ2JhKDcsNyw3LC4xKTtvdXRsaW5lOjA7b3BhY2l0eToxO2N1cnNvcjpwb2ludGVyfSNsZWZ0NzphY3RpdmUgI2lsZWY3LCNyaWd0NzphY3RpdmUgI2lyaWc3LC5idG46YWN0aXZle29wYWNpdHk6LjN9I2Zvb3Q3LCNvbm93N3t0ZXh0LWluZGVudDo1MHB4O3doaXRlLXNwYWNlOm5vd3JhcDtib3R0b206MjRweDtoZWlnaHQ6NDhweH0jYWx0czd7cmlnaHQ6NTBweH0jYWx0czcsI2luc2k3LCNpbnNpNyBpbWcsI3N0YXQ3e21heC1oZWlnaHQ6MTAwJTttYXgtd2lkdGg6MTAwJTtwb3NpdGlvbjpyZWxhdGl2ZX0jbGVmdDcsI3JpZ3Q3e3dpZHRoOjIwJTttaW4td2lkdGg6OTZweDtoZWlnaHQ6MTAwJX0jaWxlZjc6OmFmdGVyLCNpcmlnNzo6YWZ0ZXJ7cGFkZGluZzo5cHg7dG9wOjE0cHh9I2luc2k3IGltZywudHJue3RvcDo1MCU7ei1pbmRleDotMTstd2Via2l0LXRyYW5zZm9ybTp0cmFuc2xhdGUoLTUwJSk7dHJhbnNmb3JtOnRyYW5zbGF0ZVkoLTUwJSl9LnJ0cDo6YWZ0ZXIsLnJ0cDo6YmVmb3Jley13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSg0NWRlZyk7dHJhbnNmb3JtOnJvdGF0ZSg0NWRlZyl9LnJ0bTo6YWZ0ZXJ7LXdlYmtpdC10cmFuc2Zvcm06cm90YXRlKC00NWRlZyk7dHJhbnNmb3JtOnJvdGF0ZSgtNDVkZWcpfSNpbGVmNzo6YWZ0ZXJ7Ym9yZGVyLXdpZHRoOjJweCAwIDAgMnB4O2xlZnQ6MTRweH0jaXJpZzc6OmFmdGVye3JpZ2h0OjE0cHg7Ym9yZGVyLXdpZHRoOjJweCAycHggMCAwfSNsZWZ0Nzpob3ZlciAjaWxlZjc6OmFmdGVye2xlZnQ6OXB4fSNyaWd0Nzpob3ZlciAjaXJpZzc6OmFmdGVye3JpZ2h0OjlweH0jY2xvczc6OmFmdGVyLCNjbG9zNzo6YmVmb3Jle2JvcmRlci13aWR0aDowIDAgMCAycHg7aGVpZ2h0OjMwcHg7bGVmdDoyM3B4O3RvcDoxMHB4fSNwbGF5Nzo6YmVmb3JlLCNzcG57Ym9yZGVyLXJhZGl1czo1MCU7aGVpZ2h0OjI0cHg7d2lkdGg6MjRweH0jc3Buey13ZWJraXQtYW5pbWF0aW9uOmxvIC4zcyBsaW5lYXIgaW5maW5pdGU7YW5pbWF0aW9uOmxvIC4zcyBsaW5lYXIgaW5maW5pdGU7Ym9yZGVyLWNvbG9yOnRyYW5zcGFyZW50ICNhYWE7bGVmdDo1MCU7bWFyZ2luOi0xMnB4IDAgMCAtMTJweDt0b3A6NTAlfSNkb3duN3t6LWluZGV4Oi0xO3BvaW50ZXItZXZlbnRzOm5vbmU7Ym9yZGVyLXJhZGl1czowIDAgMnB4IDJweDt0b3A6MjdweDtoZWlnaHQ6NnB4O3dpZHRoOjI0cHg7Ym9yZGVyLXRvcDowfSNwbGF5Nzo6YmVmb3Jle3RyYW5zaXRpb246LjJzIGJvcmRlci1yYWRpdXM7dG9wOjEycHh9I3BsYXk3LmFjdDo6YmVmb3Jle2JvcmRlci1yYWRpdXM6NHB4fSNwbGF5Nzo6YWZ0ZXJ7Ym9yZGVyLWNvbG9yOnRyYW5zcGFyZW50ICNmZmY7Ym9yZGVyLXdpZHRoOjVweCAwIDVweCAxMnB4O2xlZnQ6MTlweDt0b3A6MTlweDt3aWR0aDoxMHB4fSNwbGF5Ny5hY3Q6OmFmdGVye2JvcmRlci13aWR0aDowIDJweDtwYWRkaW5nLXRvcDoxMHB4fSN3ZG93Nzo6YWZ0ZXJ7Ym9yZGVyLXdpZHRoOjAgMCAycHggMnB4O2JvdHRvbToyMXB4O2hlaWdodDoxMnB4O2xlZnQ6MThweDt3aWR0aDoxMnB4fSN3ZG93Nzo6YmVmb3Jle2JhY2tncm91bmQ6I2ZmZjtoZWlnaHQ6MThweDtsZWZ0OjIzcHg7dG9wOjlweDt3aWR0aDoycHh9I2ltYWc3LC50b3B7dG9wOjB9I2ltYWc3LC5sZnR7bGVmdDowfS5yZ3R7cmlnaHQ6MH0jY2xvczd7dG9wOjI0cHh9I2Rvd243LCNwbGF5Nzo6YmVmb3Jle2xlZnQ6MTJweH0jY2xvczcsI2lyaWc3LCNvbm93N3tyaWdodDoyNHB4O3RleHQtYWxpZ246cmlnaHR9I2Zvb3Q3LCNpbGVmN3tsZWZ0OjI0cHh9')
+  atribute(resource, 'rel', 'stylesheet', 'href', 'data:text/css;base64,QC13ZWJraXQta2V5ZnJhbWVzIGxve3Rvey13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSgzNjBkZWcpO3RyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKX19QGtleWZyYW1lcyBsb3t0b3std2Via2l0LXRyYW5zZm9ybTpyb3RhdGUoMzYwZGVnKTt0cmFuc2Zvcm06cm90YXRlKDM2MGRlZyl9fWJvZHl7b3ZlcmZsb3c6aW5oZXJpdCFpbXBvcnRhbnQ7bWFyZ2luOjB9I2ltYWc3e3VzZXItc2VsZWN0Om5vbmU7YmFja2dyb3VuZDojMDAwO2NvbG9yOiM3Nzc7cG9zaXRpb246Zml4ZWQ7ei1pbmRleDo5OTk5OTl9I2ltYWc3ICosI2ltYWc3IDo6YWZ0ZXIsI2ltYWc3IDo6YmVmb3Jle2ZvbnQ6MTJweC80IHNhbnMtc2VyaWY7cG9zaXRpb246YWJzb2x1dGU7Ym94LXNpemluZzpib3JkZXItYm94O21hcmdpbjowfS50cmF7dHJhbnNpdGlvbjouMnMgdHJhbnNmb3JtfS5oZGl7dHJhbnNmb3JtOnNjYWxlKDApfS5mZmZ7b3ZlcmZsb3c6aGlkZGVuIWltcG9ydGFudH0uZHBue2Rpc3BsYXk6bm9uZX0udzEwe2hlaWdodDoxMDAlO3dpZHRoOjEwMCV9I2luc2k3e3RleHQtYWxpZ246Y2VudGVyfS5vcGF7b3BhY2l0eTouN30uYnV0OjphZnRlciwuYnV0OjpiZWZvcmV7Y29udGVudDoiIn0uYm9yLC5icmE6OmFmdGVyLC5icmI6OmJlZm9yZXtib3JkZXI6MnB4IHNvbGlkICNmZmZ9LmJ1dHtiYWNrZ3JvdW5kOnJnYmEoNzcsNzcsNzcsLjIpO2hlaWdodDo0OHB4O3dpZHRoOjQ4cHg7Ym9yZGVyLXJhZGl1czo1MCU7Ym9yZGVyOjB9LmJ1dDpmb2N1cywuYnV0OmhvdmVyLC5odnI6aG92ZXIsLmh2cjpob3ZlciBidXR0b257YmFja2dyb3VuZDpyZ2JhKDcsNyw3LC4xKTtvdXRsaW5lOjA7b3BhY2l0eToxO2N1cnNvcjpwb2ludGVyfSNsZWZ0NzphY3RpdmUgI2lsZWY3LCNyaWd0NzphY3RpdmUgI2lyaWc3LC5idXQ6YWN0aXZle29wYWNpdHk6LjN9I2Zvb3Q3LCNvbm93N3t0ZXh0LWluZGVudDo1MHB4O3doaXRlLXNwYWNlOm5vd3JhcDtib3R0b206MjRweDtoZWlnaHQ6NDhweH0jYWx0czd7cmlnaHQ6NTBweH0jYWx0czcsI2luc2k3LCNpbnNpNyBpbWcsI3N0YXQ3e21heC1oZWlnaHQ6MTAwJTttYXgtd2lkdGg6MTAwJTtwb3NpdGlvbjpyZWxhdGl2ZX0jbGVmdDcsI3JpZ3Q3e3dpZHRoOjIwJTttaW4td2lkdGg6OTZweDtoZWlnaHQ6MTAwJX0jaWxlZjc6OmFmdGVyLCNpcmlnNzo6YWZ0ZXJ7cGFkZGluZzo5cHg7dG9wOjE0cHh9I2luc2k3IGltZywudHJue3RvcDo1MCU7ei1pbmRleDotMTstd2Via2l0LXRyYW5zZm9ybTp0cmFuc2xhdGUoLTUwJSk7dHJhbnNmb3JtOnRyYW5zbGF0ZVkoLTUwJSl9LnJ0cDo6YWZ0ZXIsLnJ0cDo6YmVmb3Jley13ZWJraXQtdHJhbnNmb3JtOnJvdGF0ZSg0NWRlZyk7dHJhbnNmb3JtOnJvdGF0ZSg0NWRlZyl9LnJ0bTo6YWZ0ZXJ7LXdlYmtpdC10cmFuc2Zvcm06cm90YXRlKC00NWRlZyk7dHJhbnNmb3JtOnJvdGF0ZSgtNDVkZWcpfSNpbGVmNzo6YWZ0ZXJ7Ym9yZGVyLXdpZHRoOjJweCAwIDAgMnB4O2xlZnQ6MTRweH0jaXJpZzc6OmFmdGVye3JpZ2h0OjE0cHg7Ym9yZGVyLXdpZHRoOjJweCAycHggMCAwfSNsZWZ0Nzpob3ZlciAjaWxlZjc6OmFmdGVye2xlZnQ6OXB4fSNyaWd0Nzpob3ZlciAjaXJpZzc6OmFmdGVye3JpZ2h0OjlweH0jY2xvczc6OmFmdGVyLCNjbG9zNzo6YmVmb3Jle2JvcmRlci13aWR0aDowIDAgMCAycHg7aGVpZ2h0OjMwcHg7bGVmdDoyM3B4O3RvcDoxMHB4fSNwbGF5Nzo6YmVmb3JlLCNzcG57Ym9yZGVyLXJhZGl1czo1MCU7aGVpZ2h0OjI0cHg7d2lkdGg6MjRweH0jc3Buey13ZWJraXQtYW5pbWF0aW9uOmxvIC4zcyBsaW5lYXIgaW5maW5pdGU7YW5pbWF0aW9uOmxvIC4zcyBsaW5lYXIgaW5maW5pdGU7Ym9yZGVyLWNvbG9yOnRyYW5zcGFyZW50ICNhYWE7bGVmdDo1MCU7bWFyZ2luOi0xMnB4IDAgMCAtMTJweDt0b3A6NTAlfSNkb3duN3t6LWluZGV4Oi0xO3BvaW50ZXItZXZlbnRzOm5vbmU7Ym9yZGVyLXJhZGl1czowIDAgMnB4IDJweDt0b3A6MjdweDtoZWlnaHQ6NnB4O3dpZHRoOjI0cHg7Ym9yZGVyLXRvcDowfSNwbGF5Nzo6YmVmb3Jle3RyYW5zaXRpb246LjJzIGJvcmRlci1yYWRpdXM7dG9wOjEycHh9I3BsYXk3LmF0Yzo6YmVmb3Jle2JvcmRlci1yYWRpdXM6NHB4fSNwbGF5Nzo6YWZ0ZXJ7Ym9yZGVyLWNvbG9yOnRyYW5zcGFyZW50ICNmZmY7Ym9yZGVyLXdpZHRoOjVweCAwIDVweCAxMnB4O2xlZnQ6MTlweDt0b3A6MTlweDt3aWR0aDoxMHB4fSNwbGF5Ny5hdGM6OmFmdGVye2JvcmRlci13aWR0aDowIDJweDtwYWRkaW5nLXRvcDoxMHB4fSN3ZG93Nzo6YWZ0ZXJ7Ym9yZGVyLXdpZHRoOjAgMCAycHggMnB4O2JvdHRvbToyMXB4O2hlaWdodDoxMnB4O2xlZnQ6MThweDt3aWR0aDoxMnB4fSN3ZG93Nzo6YmVmb3Jle2JhY2tncm91bmQ6I2ZmZjtoZWlnaHQ6MThweDtsZWZ0OjIzcHg7dG9wOjlweDt3aWR0aDoycHh9I2ltYWc3LC50cG97dG9wOjB9I2ltYWc3LC5sZnR7bGVmdDowfS5yZ3R7cmlnaHQ6MH0jY2xvczd7dG9wOjI0cHh9I2Rvd243LCNwbGF5Nzo6YmVmb3Jle2xlZnQ6MTJweH0jY2xvczcsI2lyaWc3LCNvbm93N3tyaWdodDoyNHB4O3RleHQtYWxpZ246cmlnaHR9I2Zvb3Q3LCNpbGVmN3tsZWZ0OjI0cHh9')
   append(d.getElementsByTagName('head')[0], resource)
 
   // create object of image gallery
   const IG = {}
+
   IG.folder = getConfig['folder'] || 'x/' // eslint-disable-line
   IG.extension = getConfig['extension'] || ''
   IG.imageContainer = getConfig['imageContainer'] || 'gall7' // eslint-disable-line
@@ -57,15 +58,15 @@
   IG.insi = element('div')
   IG.spin = element('div')
 
-  atribute(IG.clos, 'id', 'clos7', 'class', 'bra brb rtm rtp opa btn', 'aria-label', 'Close', 'title', 'Press Esc to close')
-  atribute(IG.ilef, 'id', 'ilef7', 'class', 'bra rtm opa trn btn')
-  atribute(IG.irig, 'id', 'irig7', 'class', 'bra rtp opa trn btn')
-  atribute(IG.cent, 'id', 'cent7', 'class', 'top lft w10 h10')
-  atribute(IG.rigt, 'id', 'rigt7', 'class', 'top rgt hvr', 'aria-label', 'Next')
-  atribute(IG.left, 'id', 'left7', 'class', 'top lft hvr', 'aria-label', 'Previous')
-  atribute(IG.imag, 'id', 'imag7', 'class', 'hid w10 h10', 'style', 'display:none')
+  atribute(IG.clos, 'id', 'clos7', 'class', 'bra brb rtm rtp opa but', 'aria-label', 'Close', 'title', 'Press Esc to close')
+  atribute(IG.ilef, 'id', 'ilef7', 'class', 'bra rtm opa trn but')
+  atribute(IG.irig, 'id', 'irig7', 'class', 'bra rtp opa trn but')
+  atribute(IG.cent, 'id', 'cent7', 'class', 'tpo lft w10')
+  atribute(IG.rigt, 'id', 'rigt7', 'class', 'tpo rgt hvr', 'aria-label', 'Next')
+  atribute(IG.left, 'id', 'left7', 'class', 'tpo lft hvr', 'aria-label', 'Previous')
+  atribute(IG.imag, 'id', 'imag7', 'class', 'hdi fff w10 tra', 'style', 'display:none')
   atribute(IG.spin, 'id', 'spn', 'class', 'dpn')
-  atribute(IG.insi, 'id', 'insi7')
+  atribute(IG.insi, 'id', 'insi7', 'class', 'w10')
   append(IG.rigt, IG.irig)
   append(IG.left, IG.ilef)
   append(IG.cent, IG.insi, IG.rigt, IG.left, IG.clos, IG.spin)
@@ -75,7 +76,7 @@
   // autoplay method loop
   IG.autoPlayLoop = function () {
     this.isAutoPlayOn = true
-    if (this.showButtons) this.play.className = 'btn top lft bra brb opa act'
+    if (this.showButtons) this.play.className = 'but tpo lft bra brb opa atc'
 
     this.timeOut = setTimeout(function () {
       this.right().show()
@@ -127,17 +128,17 @@
     this.isAutoPlayOn = false
     if (this.showButtons) {
       this.foot.className = this.onow.className = ''
-      this.play.className = 'btn top lft bra brb opa'
+      this.play.className = 'but tpo lft bra brb opa'
     }
     if(!this.showButtonsOnPlay) 
-    this.clos.className = 'btn bra brb rtm rtp opa'
+    this.clos.className = 'but bra brb rtm rtp opa'
     this.leftRigthBtnsShow()
     return this
   }
 
   // method on close
   IG.close = function () {
-    this.imag.className = 'hid w10 h10'
+    this.imag.className = 'hdi w10 tra'
     this.isActive = false
 
     // change class name to old class name without 'fff' and trim leading spaces      
@@ -148,8 +149,8 @@
 
   // left right buttons show/check method
   IG.leftRigthBtnsShow = function () {
-    this.left.className = this.indexOfImage === 0 ? 'dpn' : 'top lft hvr'
-    this.rigt.className = this.indexOfImage === this.imagesArray.length - 1 ? 'dpn' : 'top rgt hvr'
+    this.left.className = this.indexOfImage === 0 ? 'dpn' : 'tpo lft hvr'
+    this.rigt.className = this.indexOfImage === this.imagesArray.length - 1 ? 'dpn' : 'tpo rgt hvr'
   }
 
   // show image method to show image when loaded and recreating image element
@@ -167,7 +168,9 @@
       setTimeout(function(){d.documentElement.className = d.documentElement.className ? d.documentElement.className + ' fff' : 'fff'}.bind(this),99) 
       // changing style with class
       // d.body.style.overflow = 'hidden'// hide scrollbar
-      this.imag.className = 'fff w10 h10'
+      this.imag.className = 'fff w10 tra'
+      //remove transition 'tra' maybe better performance
+      setTimeout(function(){this.imag.className = 'fff w10'}.bind(this),220)
     }
     // show index and filename trying to load
     if (this.showButtons) {
@@ -201,7 +204,7 @@
     
     // set image alt attribute
     // atribute(this.imgs, 'alt', index.alt)
-    
+
     // image onerror methods
     this.imgs.onerror = function (e) {
       // throw new Error('Image error: ' + e.message)
@@ -214,7 +217,6 @@
       this.loadComplete()
       //the real image loaded successfully file name
       const theRealFileName = this.imgs.src
-
       if(fullNamePrefixed !== theRealFileName) 
       this.alts.innerText = theRealFileName.split('/').pop()
     }.bind(this)
@@ -264,9 +266,9 @@
       IG.alts = element('span')
       IG.fine = element('span')
       IG.down = element('span')
-      atribute(IG.play, 'id', 'play7', 'class', 'top lft bra brb opa btn')
+      atribute(IG.play, 'id', 'play7', 'class', 'tpo lft bra brb opa but')
       atribute(IG.down, 'id', 'down7', 'class', 'bor')
-      atribute(IG.wdow, 'id', 'wdow7', 'class', 'top rgt bra rtm opa btn')
+      atribute(IG.wdow, 'id', 'wdow7', 'class', 'tpo rgt bra rtm opa but')
       atribute(IG.alts, 'id', 'alts7', 'class', 'fff')
       IG.foot.id='foot7'
       IG.onow.id='onow7'

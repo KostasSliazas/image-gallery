@@ -22,7 +22,6 @@ body {
   background: #000;
   color: #777;
   position: fixed;
-  transition: .2s transform;
   z-index: 999999
 }
 
@@ -34,7 +33,9 @@ body {
   box-sizing: border-box;
   margin: 0
 }
-
+.tra {
+  transition: .2s transform
+}
 .hdi {
   transform: scale(0)
 }
@@ -48,12 +49,11 @@ body {
 }
 
 .w10 {
+  height: 100%;
   width: 100%
 }
 
-#insi7,
-.h10 {
-  height: 100%;
+#insi7 {
   text-align: center
 }
 
