@@ -169,8 +169,6 @@
       // changing style with class
       // d.body.style.overflow = 'hidden'// hide scrollbar
       this.imag.className = 'fff w10 tra'
-      //remove transition 'tra' maybe better performance
-      setTimeout(function(){this.imag.className = 'fff w10'}.bind(this),220)
     }
     // show index and filename trying to load
     if (this.showButtons) {
@@ -181,7 +179,7 @@
     if (this.imgs && (this.imgs.src === imageSource || this.imgs.src === fullNamePrefixed)) return false
      
     // if image exist remove and later recreate it
-    this.imgs && this.insi.removeChild(this.imgs)
+    this.insi.children.length > 0 && this.insi.removeChild(this.imgs)
     // add spn class when loading image src
     this.spin.className = 'bor'
     // show lft right buttons and bottom information (file name and index)
@@ -214,15 +212,22 @@
     
     // image onload methods
     this.imgs.onload = function (e) {
-      this.loadComplete()
       //the real image loaded successfully file name
       const theRealFileName = this.imgs.src
       if(fullNamePrefixed !== theRealFileName) 
       this.alts.innerText = theRealFileName.split('/').pop()
     }.bind(this)
 
-    // append image to div
-    append(this.insi, this.imgs)
+    setTimeout(function(){
+      //remove transition 'tra' maybe better performance
+      this.imag.className = 'fff w10'
+      // append image to div
+      append(this.insi, this.imgs)
+      this.loadComplete()
+      
+    }.bind(this),200)
+
+
 
     // change source only if it's not svg
     if(arrayFileName[1] !== 'svg')
