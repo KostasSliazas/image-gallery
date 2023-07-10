@@ -34,7 +34,7 @@ body {
   margin: 0
 }
 .tra {
-  transition: .2s transform
+  transition: .1s transform
 }
 .hdi {
   transform: scale(0)
