@@ -132,7 +132,7 @@ h3 {
   display: block;
 }
 
-main a {
+header a {
   color: #fbfbfb;
   text-decoration: none;
   border: 0;
@@ -146,16 +146,16 @@ main a {
   padding: 1em 1.5em;
 }
 
-a:visited {
+header a:visited {
   background-color: var(--purple-light);
 }
 
-a:hover {
+header a:hover {
   background: var(--purple);
   color: #fff;
 }
 
-a:active {
+header a:active {
   background-color: var(--purple-light);
 }
 
